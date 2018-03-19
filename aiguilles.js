@@ -1,5 +1,12 @@
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+alert("MARCEHE") ;
+var d = new Date();
 
-ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);
+var Hours = d.getHours();
+var Minutes = d.getMinutes();
+var Seconds = d.getSeconds();
+
+var degH = Hours*360/12;
+alert(degH);
+
+document.getElementById("hourPointer").style.backgroundColor = "#00FF00" ;
+element.style.transform = 'rotate('+degH+'deg)' ;

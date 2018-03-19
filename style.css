@@ -35,9 +35,8 @@ body
 	bottom: 50%;
 	left: 50%;
 	background-color: black;
-	
-	transform-origin: 105px 5px;
-	transform: rotate(10deg);
+	transform: rotate(0deg);
+	transform-origin: bottom center;
 }
 
 #minutePointer
@@ -47,6 +46,20 @@ body
 	width: 10px;
 	bottom: 50%;
 	left: 50%;
-	transform-origin: 115px 5px;
+	transform-origin: bottom center;
+	transform: rotate(0deg);
 	background-color: blue;
+
+}
+
+#secondPointer
+{
+	position: absolute;
+	height: 220px;
+	width: 5px;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom center;
+	transform: rotate(0deg);
+	background-color: red;
 }
