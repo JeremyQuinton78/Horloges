@@ -89,6 +89,9 @@ header
 	display: inline-block;
 	/* passage du pointer en "main"*/
     cursor: pointer;
+	position: fixed;
+	top: 20px;
+	right: 40px;
 }
 /* icone burger menu */
 .bar1, .bar2, .bar3 {
@@ -115,11 +118,6 @@ header
 	display: flex;
 }
 
-.container{
-	position: fixed;
-	top: 20px;
-	right: 40px;
-}
 #burgerMenu{
 	/* l'icone est fixe si l'on scroll */
 	position: fixed;
