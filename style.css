@@ -80,10 +80,19 @@ header
 {
 	position: absolute;
 	font-size: 80px;
-	top: 40%;
+	top: 37%;
 	left: 46%;
 	opacity: 0.3;
 	z-index: 0;
+}
+
+#logo
+{
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	top:71%;
+	left:48%;
 }
 
 #menu
