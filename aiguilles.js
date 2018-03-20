@@ -1,6 +1,4 @@
-for (var i=0; i < 10; i++){
-
-	setTimeout(function(){
+function refreshData(){
 	
 		var d = new Date();
 
@@ -16,6 +14,8 @@ for (var i=0; i < 10; i++){
 		document.getElementById("minutePointer").style.transform = "rotate("+degM+"deg)" ;
 		document.getElementById("secondPointer").style.transform = "rotate("+degS+"deg)" ;
 
-	}, 1000); 
+		setTimeout(refreshData, 1000) ;
 
 }
+
+refreshData();
