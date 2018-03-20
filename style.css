@@ -90,7 +90,7 @@ header
 	/* passage du pointer en "main"*/
     cursor: pointer;
 	position: fixed;
-	top: 20px;
+	top: 42.5px;
 	right: 40px;
 }
 /* icone burger menu */
@@ -123,6 +123,16 @@ header
 	position: fixed;
 	/* Le contenu du menu ne s'affiche pas à l'avance */
 	display: none;
-	top: 60px;
+	top: 100px;
 	right: 40px;
+
+	overflow-y: scroll;
+}
+
+ul li
+{
+	background-color: rgba(5,5,5,0.35);
+	padding: 10px ;  
+	list-style: none;
+	font-size: 20px ;
 }
