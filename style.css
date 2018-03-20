@@ -8,6 +8,8 @@ body
 header
 {
 	text-align: center;
+	border: 3px solid black;
+	margin: 2%;
 }
 
 .main
