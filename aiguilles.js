@@ -28,8 +28,6 @@ function refreshData(){
 			elemPM.style.display = 'none' ;
 		}	
 
-
-
 		setTimeout(refreshData, 1) ;
 }
 refreshData();

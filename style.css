@@ -41,7 +41,7 @@ header
 	height: 110px;
 	width: 10px;
 	bottom: 50%;
-	left: 50%;
+	left: 49.7%;
 	background-color: black;
 	transform-origin: bottom center;
 	transform: rotate(0deg);
@@ -54,7 +54,7 @@ header
 	height: 220px;
 	width: 10px;
 	bottom: 50%;
-	left: 50%;
+	left: 49.7%;
 	transform-origin: bottom center;
 	transform: rotate(0deg);
 	background-color: blue;
@@ -67,7 +67,7 @@ header
 	height: 220px;
 	width: 5px;
 	bottom: 50%;
-	left: 50%;
+	left: 49.7%;
 	transform-origin: bottom center;
 	transform: rotate(0deg);
 	background-color: red;
@@ -126,7 +126,8 @@ header
 	top: 100px;
 	right: 40px;
 
-	overflow: visible;
+	height: 600px;
+	overflow-y: auto;
 }
 
 ul li
