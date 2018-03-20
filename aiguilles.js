@@ -7,7 +7,7 @@ function refreshData(){
 		var Seconds = d.getSeconds();
 		var MilliS = d.getMilliseconds();
 
-		var degH = (Hours+Minutes/60)*360/12 ;
+		var degH = (Hours+Minutes/60+Seconds/3600)*360/12;
 		var degM = (Minutes+Seconds/60+MilliS/60000)*360/60;
 		var degS = (Seconds+MilliS/1000)*360/60;
 
@@ -27,6 +27,10 @@ function refreshData(){
 			elemAM.style.display = 'block';
 			elemPM.style.display = 'none' ;
 		}	
+		if(Minutes == 0 && Seconds == 0){
+			var player = document.querySelector('#coucou');
+			player.play() ;
+		}
 
 		setTimeout(refreshData, 1) ;
 }
