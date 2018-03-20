@@ -8,8 +8,17 @@ function refreshData(){
 		var MilliS = d.getMilliseconds();
 
 		var selectVille = document.getElementById("ville") ; 
-		console.log(parseInt(selectVille.value));
+		var jetLag = parseFloat(selectVille.value) ;
 
+		if((parseFloat(jetLag) == parseInt(jetLag)) && !isNaN(jetLag)){ 
+			Hours = Hours + jetLag;
+  		}
+  		else {
+			var decimal = jetLag - parseInt(jetLag);
+			Hours = Hours + jetLag;
+			Minutes = Minutes + decimal*60;
+		}
+		
 		var degH = (Hours+Minutes/60+Seconds/3600)*360/12;
 		var degM = (Minutes+Seconds/60+MilliS/60000)*360/60;
 		var degS = (Seconds+MilliS/1000)*360/60;
