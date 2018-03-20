@@ -2,13 +2,13 @@ function refreshData(){
 	
 		var d = new Date();
 
-		var Hours = d.getHours();
+		var Hours = d.getHours()-1;
 		var Minutes = d.getMinutes();
 		var Seconds = d.getSeconds();
 		var MilliS = d.getMilliseconds();
 
 		var selectVille = document.getElementById("ville") ; 
-		console.log(selectVille.value);
+		console.log(parseInt(selectVille.value));
 
 		var degH = (Hours+Minutes/60+Seconds/3600)*360/12;
 		var degM = (Minutes+Seconds/60+MilliS/60000)*360/60;
