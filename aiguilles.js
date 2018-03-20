@@ -1,12 +1,21 @@
-alert("MARCEHE") ;
-var d = new Date();
+for (var i=0; i < 10; i++){
 
-var Hours = d.getHours();
-var Minutes = d.getMinutes();
-var Seconds = d.getSeconds();
+	setTimeout(function(){
+	
+		var d = new Date();
 
-var degH = Hours*360/12;
-alert(degH);
+		var Hours = d.getHours();
+		var Minutes = d.getMinutes();
+		var Seconds = d.getSeconds();
 
-document.getElementById("hourPointer").style.backgroundColor = "#00FF00" ;
-element.style.transform = 'rotate('+degH+'deg)' ;
+		var degH = ((Hours+Minutes/60)*360/12) ;
+		var degM = Minutes*360/60;
+		var degS = Seconds*360/60;
+
+		document.getElementById("hourPointer").style.transform = "rotate("+degH+"deg)" ;
+		document.getElementById("minutePointer").style.transform = "rotate("+degM+"deg)" ;
+		document.getElementById("secondPointer").style.transform = "rotate("+degS+"deg)" ;
+
+	}, 1000); 
+
+}
