@@ -7,8 +7,8 @@ function refreshData(){
 		var Seconds = d.getSeconds();
 		var MilliS = d.getMilliseconds();
 
-		var degH = ((Hours+Minutes/60)*360/12) ;
-		var degM = Minutes*360/60;
+		var degH = (Hours+Minutes/60)*360/12 ;
+		var degM = (Minutes+Seconds/60+MilliS/60000)*360/60;
 		var degS = (Seconds+MilliS/1000)*360/60;
 
 
