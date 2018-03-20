@@ -7,9 +7,13 @@ body
 
 header
 {
-	text-align: center;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
 	border: 3px solid black;
 	margin: 2%;
+	padding-left: 2.5%;
+	padding-right: 2.5%; 
 }
 
 .main
@@ -42,10 +46,9 @@ header
 	width: 10px;
 	bottom: 50%;
 	left: 49.7%;
-	background-color: black;
 	transform-origin: bottom center;
 	transform: rotate(0deg);
-	
+	background-color: black;
 }
 
 #minutePointer
@@ -83,57 +86,13 @@ header
 	z-index: 0;
 }
 
-/* icone burger menu */
-.container {
-	/* positionnement des elements l'un en dessous des autres*/
-	display: inline-block;
-	/* passage du pointer en "main"*/
-    cursor: pointer;
-	position: fixed;
-	top: 42.5px;
-	right: 40px;
-}
-/* icone burger menu */
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color:black;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-/* instruction après click en relation avec le .js (déplacement des barres) */
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-/* cette barre est mise en transparence car pas utilisée*/
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-9px, -6px);
-    transform: rotate(45deg) translate(-9px, -6px);
-}
-/* mise en horizontal des blocs 2 et 3 */
-#conteneur{
-	display: flex;
-}
-
-#burgerMenu{
-	/* l'icone est fixe si l'on scroll */
-	position: fixed;
-	/* Le contenu du menu ne s'affiche pas à l'avance */
-	display: none;
-	top: 100px;
-	right: 40px;
-
-	height: 600px;
-	overflow-y: auto;
-}
-
-ul li
+#menu
 {
-	background-color: rgba(5,5,5,0.35);
-	padding: 10px ;  
-	list-style: none;
+	
+}
+
+option
+{
+	
 	font-size: 20px ;
 }
