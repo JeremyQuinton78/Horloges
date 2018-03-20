@@ -19,3 +19,16 @@ function refreshData(){
 }
 
 refreshData();
+
+    /* click sur l'icone burger menu, ca active la classe change */
+    function myFunction(x) {
+		x.classList.toggle("change");
+	
+		/* variable monElement = css du burgerMenu */
+		var monElement = document.getElementById("burgerMenu");
+		/* condition si la liste du burgerMenu est affichée on cache, sinon on affiche */
+		if (monElement.style.display == "block")
+			monElement.style.display="none";
+		else
+		   monElement.style.display="block";
+	}
