@@ -126,7 +126,7 @@ header
 	top: 100px;
 	right: 40px;
 
-	overflow-y: scroll;
+	overflow: visible;
 }
 
 ul li
