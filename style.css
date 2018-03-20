@@ -73,6 +73,16 @@ header
 	background-color: red;
 }
 
+#AM, #PM
+{
+	position: absolute;
+	font-size: 80px;
+	top: 40%;
+	left: 45.5%;
+	opacity: 0.3;
+	z-index: 0;
+}
+
 /* icone burger menu */
 .container {
 	/* positionnement des elements l'un en dessous des autres*/

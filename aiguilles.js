@@ -16,8 +16,21 @@ function refreshData(){
 		document.getElementById("minutePointer").style.transform = "rotate("+degM+"deg)" ;
 		document.getElementById("secondPointer").style.transform = "rotate("+degS+"deg)" ;
 
-		setTimeout(refreshData, 0) ;
+		var elemAM = document.getElementById("AM") ;
+		var elemPM = document.getElementById("PM") ;
+		
+		if(Hours >= 12){
+			elemAM.style.display = 'none' ;
+			elemPM.style.display = 'block';
+		}
+		else{
+			elemAM.style.display = 'block';
+			elemPM.style.display = 'none' ;
+		}	
 
+
+
+		setTimeout(refreshData, 1) ;
 }
 refreshData();
 
