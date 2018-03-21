@@ -33,7 +33,7 @@ header
 	height: 500px;
 	width: 500px;
 	top: 50%;
-	background-image: url(images/dial.jpg) ;
+	background-image: url(../images/dial.jpg) ;
 	background-size: 500px 500px;
 }
 
