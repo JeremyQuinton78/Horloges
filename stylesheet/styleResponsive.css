@@ -1,0 +1,17 @@
+.main
+{
+	width: 100%;
+	overflow-x: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#map
+{
+	top: 30px;
+	height: 450px;
+	width: 850px;
+}
