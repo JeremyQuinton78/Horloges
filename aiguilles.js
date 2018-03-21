@@ -1,4 +1,4 @@
-var coordVille = '{"coordVille":['+
+var objCoordVille = '{"coordVille":['+
 '{"id":"-11", "lat":"-0.17", "lng":"-160" },' +
 '{"id":"-10", "lat":"-17.553", "lng":"-149.555" },' +
 '{"id":"-9.5", "lat":"-8.907", "lng":"-140.104" },' +
@@ -31,7 +31,10 @@ var coordVille = '{"coordVille":['+
 '{"id":"10", "lat":"-33,908", "lng":"151,2" },' +
 '{"id":"11", "lat":"-17,739", "lng":"168,317" },' +
 '{"id":"12", "lat":"-36,914", "lng":"174,827" },' +
-'{"id":"13", "lat":"-19,79", "lng":"-174,349" },' ;
+'{"id":"13", "lat":"-19,79", "lng":"-174,349" }]}' ;
+
+var obj = JSON.parse(objCoordVille);
+
 
 function refreshData(){
 	
@@ -80,7 +83,7 @@ function refreshData(){
 
 		setTimeout(refreshData, 1) ;
 }
-refreshData();
+
 
 function initMap() 
 {
@@ -95,15 +98,14 @@ function initMap()
 		fullscreenControl: false
 		}
 	)
-	var myLatLng = {lat: -18, lng: -150};
-	var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-  	});
-
-
-
+	
+var myLatLng = {lat: -18, lng: -150};
+		var marker = new google.maps.Marker({
+   		position: myLatLng,
+    	map: map,
+  		});
 
 };
 
+refreshData();
 
