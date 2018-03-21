@@ -61,6 +61,7 @@ function initMap()
 		fullscreenControl: false
 		}
 	)
+
 };
 
 
