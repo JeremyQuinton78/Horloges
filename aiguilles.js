@@ -47,5 +47,20 @@ function refreshData(){
 }
 refreshData();
 
+function initMap() 
+{
+	var map = new google.maps.Map(document.getElementById('map'), {
+		center: {lat: 25, lng: 8},
+		zoom: 1.8,
+		//disableDefaultUI: true,
+		zoomControl: false,
+  		mapTypeControl: false,
+  		scaleControl: false,
+		streetViewControl: false,
+		rotateControl: false,
+		fullscreenControl: false
+		}
+	)
+};
 
 

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title> Horloge Analogique </title>
 		<link rel="stylesheet" href="style.css" />
-		<script src="aiguilles.js"></script>
+
 	</head>
 	<body>
 		<header>
@@ -55,16 +55,31 @@
 		</header>
 
 		<div class="main">
+			
 			<div class="dial">
 				<p id="AM">AM</p>
 				<p id="PM">PM</p>
 				<img id="logo" src="images/logo.png">
+				<div id="secondPointer"> </div>
 				<div id="minutePointer"> </div>
 				<div id="hourPointer"> </div>
-				<div id="secondPointer"> </div>
 			</div>
 			<audio id="coucou" src="sounds/coucou.ogg"></audio>
+		
+		
+
+			<div id="map"></div>
+
 		</div>
+
+
+			<script type="text/javascript" src="aiguilles.js"> initMap(); </script>
+			
+			<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyD7r8n4Hx1xdzVQZx4rq7f_KA-CTxUdXAI&callback=initMap"
+    		async defer></script>
+
+    		
+		
 
 		<script src="aiguilles.js"></script>
 
