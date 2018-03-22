@@ -1,4 +1,4 @@
-body
+html body
 {
 	width: 100%;
 	height: 100%;
@@ -67,6 +67,15 @@ header
 	height: 45%;
 	width: 1%;
 	background-color: #666000;
+}
+
+#date
+{
+	position: absolute;
+	font-size: 50px;
+	top:90%;
+	left:25%;
+	word-wrap: inherit;
 }
 
 #AM, #PM
