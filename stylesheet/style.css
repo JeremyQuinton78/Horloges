@@ -39,8 +39,8 @@ header
 
 #map
 {
-	height: 450px;
-	width: 850px;
+	height: 420px;
+	width: 800px;
 }
 
 #hourPointer, #minutePointer, #secondPointer

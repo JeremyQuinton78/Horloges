@@ -1,20 +1,4 @@
-/*
-var json = (function() {
-        var json = null;
-        $.ajax({
-            'async': false,
-            'global': false,
-            'url': "/coordVille.json",
-            'dataType': "json",
-            'success': function (data) {
-                json = data;
-            }
-        });
-        return json;
-    })();
-
-var objCoordVille = '
-{"coordVille":[
+var objCoordVille = '{"coordVille":['+
 	'{"id":"-11", "lat":"-0.17", "lng":"-160"},' +
 	'{"id":"-10", "lat":"-17.553", "lng":"-149.555"},' + 
 	'{"id":"-9.5", "lat":"-8.907", "lng":"-140.104"},' +
@@ -47,25 +31,37 @@ var objCoordVille = '
 	'{"id":"10", "lat":"-33.908", "lng":"151.2"},' +
 	'{"id":"11", "lat":"-17.739", "lng":"168.317"},' +
 	'{"id":"12", "lat":"-36.914", "lng":"174.827"},' +
-	'{"id":"13", "lat":"-19.79", "lng":"-174.349" }
-]}' ;
+	'{"id":"13", "lat":"-19.79", "lng":"-174.349" }]}' ;
 
-var obj = JSON.parse(objCoordVille);
+	var obj = JSON.parse(objCoordVille);
 
-console.log(coordVille[0]);
-*/
+	var latMaps ;
+	var lngMaps ;
+	var jetLag ;
+
+	
 
 function refreshData(){
 	
 		var d = new Date();
 
-		var Hours = d.getHours()-1;
+		var Year = d.getFullYear();
+		var Month = d.getMonth()+1;
+		var Day = d.getDate();
+		var Hours = d.getHours();
 		var Minutes = d.getMinutes();
 		var Seconds = d.getSeconds();
 		var MilliS = d.getMilliseconds();
 
 		var selectVille = document.getElementById("ville") ; 
-		var jetLag = parseFloat(selectVille.value) ;
+		jetLag = parseFloat(selectVille.value) ;
+
+		for (var i = 0; i <= 32; i++) {
+			if(obj.coordVille[i].id == jetLag){
+				latMaps = obj.coordVille[i].lat;
+				lngMaps = obj.coordVille[i].lng;
+			}
+	}
 
 		if((parseFloat(jetLag) == parseInt(jetLag)) && !isNaN(jetLag)){ 
 			Hours = Hours + jetLag;
@@ -100,6 +96,12 @@ function refreshData(){
 			player.play() ;
 		}
 
+		/*
+		{document.getElementById('date').innerHTML = Day+"/"+Month+"/"+Year ;}
+		{document.getElementById('date').innerHTML = Month+"/"+Day+"/"+Year ;}
+		{document.getElementById('date').innerHTML = Year+"/"+Month+"/"+Day ;}
+		*/
+
 		setTimeout(refreshData, 1) ;
 }
 
@@ -108,7 +110,7 @@ function initMap()
 {
 	var map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: 25, lng: 8},
-		zoom: 1.8,
+		zoom: 1.6,
 		zoomControl: false,
   		mapTypeControl: false,
   		scaleControl: false,
@@ -118,7 +120,7 @@ function initMap()
 		}
 	)
 	
-var myLatLng = {lat: -18, lng: -150};
+var myLatLng = {lat: parseFloat(latMaps), lng: parseFloat(lngMaps)};
 		var marker = new google.maps.Marker({
    		position: myLatLng,
     	map: map,
