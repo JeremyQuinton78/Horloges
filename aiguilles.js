@@ -38,7 +38,7 @@ var objCoordVille = '{"coordVille":['+
 	var latMaps ;
 	var lngMaps ;
 	var jetLag ;
-
+	var zoomMap = 1.6;
 	
 
 function refreshData(){
@@ -55,6 +55,9 @@ function refreshData(){
 
 		var selectVille = document.getElementById("ville") ; 
 		jetLag = parseFloat(selectVille.value) ;
+
+		if((jetLag+Hours) < 0){Day = Day - 1;}
+		if((jetLag+Hours) >= 24){Day = Day + 1;}
 
 		for (var i = 0; i <= 32; i++) {
 			if(obj.coordVille[i].id == jetLag){
@@ -114,7 +117,7 @@ function initMap()
 {
 	var map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: 25, lng: 8},
-		zoom: 1.6,
+		zoom: zoomMap,
 		zoomControl: false,
 			mapTypeControl: false,
 			scaleControl: false,
@@ -130,4 +133,3 @@ function initMap()
 		map: map,
 	});
 };
-
